@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs for page base.php</title>
+  <link rel="stylesheet" href="../media/stylesheet.css" />
+  <script src="../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../media/images/plus.gif";
+	imgMinus.src = "../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><h2>File: Program_Root/lib/base.php</h2>
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ) );
+</script>
+
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+<!-- =========== Used Classes =========== -->
+<A NAME='classes_summary'><!-- --></A>
+<h3>Classes defined in this file</h3>
+
+<TABLE CELLPADDING='3' CELLSPACING='0' WIDTH='100%' CLASS="border">
+	<THEAD>
+		<TR><TD STYLE="width:20%"><h4>CLASS NAME</h4></TD><TD STYLE="width: 80%"><h4>DESCRIPTION</h4></TD></TR>
+	</THEAD>
+	<TBODY>
+			</TBODY>
+</TABLE>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+<!-- ============ Includes DETAIL =========== -->
+
+<h2 class="tab">Include/Require Statements</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+
+
+<a name="_HORDE_BASE_/lib/Auth_php"><!-- --></a>
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/file.png" border="0" /> <strong class="Property">HORDE_BASE.'/lib/Auth.php'</strong> (line <span class="linenumber">29</span>)
+ </h4> 
+<h4>require_once : HORDE_BASE.'/lib/Auth.php'</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="_HORDE_BASE_/lib/Registry_php"><!-- --></a>
+<div style="background='#ffffff'">
+<h4>
+  <img src="../media/images/file.png" border="0" /> <strong class="Property">HORDE_BASE.'/lib/Registry.php'</strong> (line <span class="linenumber">21</span>)
+ </h4> 
+<h4>require_once : HORDE_BASE.'/lib/Registry.php'</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="_HORDE_BASE_/lib/Help_php"><!-- --></a>
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/file.png" border="0" /> <strong class="Property">HORDE_BASE.'/lib/Help.php'</strong> (line <span class="linenumber">30</span>)
+ </h4> 
+<h4>require_once : HORDE_BASE.'/lib/Help.php'</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="_HORDE_BASE_/lib/Group_php"><!-- --></a>
+<div style="background='#ffffff'">
+<h4>
+  <img src="../media/images/file.png" border="0" /> <strong class="Property">HORDE_BASE.'/lib/Group.php'</strong> (line <span class="linenumber">32</span>)
+ </h4> 
+<h4>require_once : HORDE_BASE.'/lib/Group.php'</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="_HORDE_BASE_/lib/Browser_php"><!-- --></a>
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/file.png" border="0" /> <strong class="Property">HORDE_BASE.'/lib/Browser.php'</strong> (line <span class="linenumber">17</span>)
+ </h4> 
+<h4>require_once : HORDE_BASE.'/lib/Browser.php'</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>$Horde: whups/lib/base.php,v 1.35 2003/01/05 18:35:19 jan Exp $</h5>
+<div class="desc"><p>Copyright 2001-2003 Robert E. Coyle &lt;robertecoyle@hotmail.com&gt;</p><p>See the enclosed file LICENSE for license information (BSD). If you  did not receive this file, see http://www.horde.org/bsdl.php.</p><p>Whups base inclusion file.</p><p>This file brings in all of the dependencies that every Whups script  will need, and sets up objects that all scripts use.</p></div>
+<ul>
+	</ul>
+</div>
+<a name="_HORDE_BASE_/lib/Perms_php"><!-- --></a>
+<div style="background='#ffffff'">
+<h4>
+  <img src="../media/images/file.png" border="0" /> <strong class="Property">HORDE_BASE.'/lib/Perms.php'</strong> (line <span class="linenumber">31</span>)
+ </h4> 
+<h4>require_once : HORDE_BASE.'/lib/Perms.php'</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="_HORDE_BASE_/lib/Horde_php"><!-- --></a>
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/file.png" border="0" /> <strong class="Property">HORDE_BASE.'/lib/Horde.php'</strong> (line <span class="linenumber">28</span>)
+ </h4> 
+<h4>require_once : HORDE_BASE.'/lib/Horde.php'</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="_OPENHR_LIB_Page_php"><!-- --></a>
+<div style="background='#ffffff'">
+<h4>
+  <img src="../media/images/file.png" border="0" /> <strong class="Property">OPENHR_LIB.'Page.php'</strong> (line <span class="linenumber">49</span>)
+ </h4> 
+<h4>require_once : OPENHR_LIB.'Page.php'</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="_OPENHR_LIB_Notification/Listener/smarty_php"><!-- --></a>
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/file.png" border="0" /> <strong class="Property">OPENHR_LIB.'Notification/Listener/smarty.php'</strong> (line <span class="linenumber">37</span>)
+ </h4> 
+<h4>require_once : OPENHR_LIB.'Notification/Listener/smarty.php'</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="_OPENHR_LIB_Smarty_php"><!-- --></a>
+<div style="background='#ffffff'">
+<h4>
+  <img src="../media/images/file.png" border="0" /> <strong class="Property">OPENHR_LIB.'Smarty.php'</strong> (line <span class="linenumber">47</span>)
+ </h4> 
+<h4>require_once : OPENHR_LIB.'Smarty.php'</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>notification object is used in to collect messages</h5>
+<ul>
+		<li><strong>name:</strong> - $notification</li>
+	</ul>
+</div>
+<a name="_OPENHR_LIB_Logging_php"><!-- --></a>
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/file.png" border="0" /> <strong class="Property">OPENHR_LIB.'Logging.php'</strong> (line <span class="linenumber">48</span>)
+ </h4> 
+<h4>require_once : OPENHR_LIB.'Logging.php'</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="_OPENHR_LIB_User_php"><!-- --></a>
+<div style="background='#ffffff'">
+<h4>
+  <img src="../media/images/file.png" border="0" /> <strong class="Property"><a href="../OpenHR/_lib_User_php.html">User.php</a></strong> (line <span class="linenumber">61</span>)
+ </h4> 
+<h4>require_once : <a href="../OpenHR/_lib_User_php.html">User.php</a></h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>smarty object is used in every page to generate the output</h5>
+<ul>
+		<li><strong>global:</strong> - ob 0: ject $GLOBALS['smarty']</li>
+		<li><strong>name:</strong> - $smarty</li>
+	</ul>
+</div>
+<a name="_HORDE_BASE_/lib/Notification_php"><!-- --></a>
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/file.png" border="0" /> <strong class="Property">HORDE_BASE.'/lib/Notification.php'</strong> (line <span class="linenumber">36</span>)
+ </h4> 
+<h4>require_once : HORDE_BASE.'/lib/Notification.php'</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="_OPENHR_LIB_Company_php"><!-- --></a>
+<div style="background='#ffffff'">
+<h4>
+  <img src="../media/images/file.png" border="0" /> <strong class="Property"><a href="../OpenHR/_lib_Company_php.html">Company.php</a></strong> (line <span class="linenumber">62</span>)
+ </h4> 
+<h4>require_once : <a href="../OpenHR/_lib_Company_php.html">Company.php</a></h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="_HORDE_BASE_/lib/Menu_php"><!-- --></a>
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/file.png" border="0" /> <strong class="Property">HORDE_BASE.'/lib/Menu.php'</strong> (line <span class="linenumber">33</span>)
+ </h4> 
+<h4>require_once : HORDE_BASE.'/lib/Menu.php'</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+</div>
+<div class="tab-page" id="tabPage2">
+<!-- ============ GLOBAL DETAIL =========== -->
+
+<h2 class="tab">Global Variables</h2>
+
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script>
+
+</div>
+<div class="tab-page" id="tabPage3">
+<!-- ============ CONSTANT DETAIL =========== -->
+
+<A NAME='constant_detail'></A>
+<h2 class="tab">Constants</h2>
+
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage3" ) );</script>
+
+<a name="defineOPENHR_TEMPLATES"><!-- --></a>
+<div style="background='#ffffff'">
+<h4>
+  <img src="../media/images/Constant.gif" border="0" /> <strong class="property">OPENHR_TEMPLATES</strong> (line <span class="linenumber">25</span>)
+ </h4> 
+<h4>OPENHR_TEMPLATES : $registry-&gt;getParam('templates')</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+</div>
+<div class="tab-page" id="tabPage4">
+<!-- ============ FUNCTION DETAIL =========== -->
+
+<h2 class="tab">Functions</h2>
+
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage4" ) );</script>
+
+</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documention generated on Sat,  1 Feb 2003 09:42:46 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.2.0beta3</a>
+	</div>
+</body>
+</html>

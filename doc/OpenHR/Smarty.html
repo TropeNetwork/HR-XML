@@ -1,0 +1,1648 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class Smarty</title>
+  <link rel="stylesheet" href="../media/stylesheet.css" />
+  <script src="../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../media/images/plus.gif";
+	imgMinus.src = "../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class Smarty
+</h2> (line <span class="linenumber">58</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
+
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+</pre>
+<p>
+	<b><i>Located in File: Program_Root/lib/Smarty/Smarty.class.php</i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+<br /><hr />
+<span class="type">Classes extended from Smarty:</span>
+ 		<dl>
+	<dt><a href="../OpenHR/Smarty_Compiler.html">Smarty_Compiler</a></dt>
+		<dd></dd>
+	</dl>
+		<dl>
+	<dt><a href="../OpenHR/Smarty_OpenHR.html">Smarty_OpenHR</a></dt>
+		<dd></dd>
+	</dl>
+	</p>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+
+<a name="var$autoload_filters" id="var$autoload_filters"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$autoload_filters = array()</strong> (line <span class="linenumber">86</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$cache_dir" id="var$cache_dir"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$cache_dir =   'cache'</strong> (line <span class="linenumber">102</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$cache_handler_func" id="var$cache_handler_func"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$cache_handler_func =  null</strong> (line <span class="linenumber">106</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$cache_lifetime" id="var$cache_lifetime"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$cache_lifetime =   3600</strong> (line <span class="linenumber">103</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$cache_modified_check" id="var$cache_modified_check"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$cache_modified_check =  false</strong> (line <span class="linenumber">109</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$caching" id="var$caching"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$caching =   0</strong> (line <span class="linenumber">97</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$compiler_class" id="var$compiler_class"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$compiler_class =    'Smarty_Compiler'</strong> (line <span class="linenumber">143</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$compile_check" id="var$compile_check"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$compile_check =   true</strong> (line <span class="linenumber">88</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$compile_dir" id="var$compile_dir"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$compile_dir =   'templates_c'</strong> (line <span class="linenumber">68</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$compile_id" id="var$compile_id"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$compile_id =  null</strong> (line <span class="linenumber">150</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$config_dir" id="var$config_dir"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$config_dir =   'configs'</strong> (line <span class="linenumber">69</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$debugging" id="var$debugging"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$debugging =   false</strong> (line <span class="linenumber">72</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$debugging_ctrl" id="var$debugging_ctrl"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$debugging_ctrl =   'NONE'</strong> (line <span class="linenumber">75</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$debug_tpl" id="var$debug_tpl"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$debug_tpl =   ''</strong> (line <span class="linenumber">73</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$default_modifiers" id="var$default_modifiers"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$default_modifiers = array()</strong> (line <span class="linenumber">155</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$default_template_handler_func" id="var$default_template_handler_func"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$default_template_handler_func =  ''</strong> (line <span class="linenumber">112</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$force_compile" id="var$force_compile"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$force_compile =   false</strong> (line <span class="linenumber">94</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$global_assign" id="var$global_assign"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$global_assign = array( 'HTTP_SERVER_VARS' =&gt; array( 'SCRIPT_NAME' ))</strong> (line <span class="linenumber">80</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$left_delimiter" id="var$left_delimiter"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$left_delimiter =   '{'</strong> (line <span class="linenumber">140</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$php_handling" id="var$php_handling"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$php_handling =   SMARTY_PHP_PASSTHRU</strong> (line <span class="linenumber">114</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$plugins_dir" id="var$plugins_dir"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$plugins_dir = array('plugins')</strong> (line <span class="linenumber">70</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$request_vars_order" id="var$request_vars_order"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$request_vars_order =  "EGPCS"</strong> (line <span class="linenumber">146</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$right_delimiter" id="var$right_delimiter"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$right_delimiter =   '}'</strong> (line <span class="linenumber">141</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$secure_dir" id="var$secure_dir"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$secure_dir = array('templates')</strong> (line <span class="linenumber">125</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$security" id="var$security"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$security =    false</strong> (line <span class="linenumber">124</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$security_settings" id="var$security_settings"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$security_settings</strong> (line <span class="linenumber">126</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$template_dir" id="var$template_dir"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$template_dir =   'templates'</strong> (line <span class="linenumber">67</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>***********************************************************************</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$trusted_dir" id="var$trusted_dir"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$trusted_dir = array()</strong> (line <span class="linenumber">136</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$undefined" id="var$undefined"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$undefined =   null</strong> (line <span class="linenumber">84</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$use_sub_dirs" id="var$use_sub_dirs"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$use_sub_dirs =  true</strong> (line <span class="linenumber">151</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$_cache_info" id="var$_cache_info"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_cache_info = array()</strong> (line <span class="linenumber">180</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$_compile_id" id="var$_compile_id"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_compile_id =  null</strong> (line <span class="linenumber">177</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$_config" id="var$_config"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_config = array()</strong> (line <span class="linenumber">172</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$_conf_obj" id="var$_conf_obj"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_conf_obj =  null</strong> (line <span class="linenumber">171</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$_error_msg" id="var$_error_msg"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_error_msg =  false</strong> (line <span class="linenumber">165</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>***********************************************************************</h5>
+<ul>
+	</ul>
+</div>
+<a name="var$_extract" id="var$_extract"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_extract =  false</strong> (line <span class="linenumber">175</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$_foreach" id="var$_foreach"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_foreach = array()</strong> (line <span class="linenumber">169</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$_inclusion_depth" id="var$_inclusion_depth"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_inclusion_depth =  0</strong> (line <span class="linenumber">176</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$_plugins" id="var$_plugins"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_plugins</strong> (line <span class="linenumber">181</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$_sections" id="var$_sections"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_sections = array()</strong> (line <span class="linenumber">168</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$_smarty_debug_id" id="var$_smarty_debug_id"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_smarty_debug_id =  'SMARTY_DEBUG'</strong> (line <span class="linenumber">178</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$_smarty_debug_info" id="var$_smarty_debug_info"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_smarty_debug_info = array()</strong> (line <span class="linenumber">179</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$_smarty_md5" id="var$_smarty_md5"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_smarty_md5 =  'f8d698aea36fcbead2b9d5359ffca76f'</strong> (line <span class="linenumber">173</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$_smarty_vars" id="var$_smarty_vars"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_smarty_vars =  null</strong> (line <span class="linenumber">167</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$_tag_stack" id="var$_tag_stack"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_tag_stack = array()</strong> (line <span class="linenumber">170</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$_tpl_vars" id="var$_tpl_vars"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_tpl_vars = array()</strong> (line <span class="linenumber">166</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$_version" id="var$_version"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_version =  '2.3.1'</strong> (line <span class="linenumber">174</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+
+<A NAME='method_detail'></A>
+
+
+<a name="methodSmarty" id="methodSmarty"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/Constructor.gif" border="0" /> <strong class="method">Constructor Smarty</strong> (line <span class="linenumber">197</span>)
+ </h4> 
+<h4><i>void</i> <strong>Smarty(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodappend" id="methodappend"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method append</strong> (line <span class="linenumber">258</span>)
+ </h4> 
+<h4><i>void</i> <strong>append(
+mixed
+$tpl_var, [mixed
+$value = NULL])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodappend_by_ref" id="methodappend_by_ref"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method append_by_ref</strong> (line <span class="linenumber">284</span>)
+ </h4> 
+<h4><i>void</i> <strong>append_by_ref(
+mixed
+$tpl_var, mixed
+&$value)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodassign" id="methodassign"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method assign</strong> (line <span class="linenumber">228</span>)
+ </h4> 
+<h4><i>void</i> <strong>assign(
+mixed
+$tpl_var, [mixed
+$value = NULL])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodassign_by_ref" id="methodassign_by_ref"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method assign_by_ref</strong> (line <span class="linenumber">247</span>)
+ </h4> 
+<h4><i>void</i> <strong>assign_by_ref(
+mixed
+$tpl_var, mixed
+&$value)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodclear_all_assign" id="methodclear_all_assign"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method clear_all_assign</strong> (line <span class="linenumber">546</span>)
+ </h4> 
+<h4><i>void</i> <strong>clear_all_assign(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodclear_all_cache" id="methodclear_all_cache"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method clear_all_cache</strong> (line <span class="linenumber">515</span>)
+ </h4> 
+<h4><i>void</i> <strong>clear_all_cache(
+[mixed
+$exp_time = null])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodclear_assign" id="methodclear_assign"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method clear_assign</strong> (line <span class="linenumber">300</span>)
+ </h4> 
+<h4><i>void</i> <strong>clear_assign(
+mixed
+$tpl_var)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodclear_cache" id="methodclear_cache"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method clear_cache</strong> (line <span class="linenumber">488</span>)
+ </h4> 
+<h4><i>void</i> <strong>clear_cache(
+[mixed
+$tpl_file = null], [mixed
+$cache_id = null], [mixed
+$compile_id = null], [mixed
+$exp_time = null])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodclear_compiled_tpl" id="methodclear_compiled_tpl"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method clear_compiled_tpl</strong> (line <span class="linenumber">557</span>)
+ </h4> 
+<h4><i>void</i> <strong>clear_compiled_tpl(
+[mixed
+$tpl_file = null], [mixed
+$compile_id = null], [mixed
+$exp_time = null])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methoddisplay" id="methoddisplay"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method display</strong> (line <span class="linenumber">597</span>)
+ </h4> 
+<h4><i>void</i> <strong>display(
+mixed
+$tpl_file, [mixed
+$cache_id = null], [mixed
+$compile_id = null])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodfetch" id="methodfetch"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method fetch</strong> (line <span class="linenumber">606</span>)
+ </h4> 
+<h4><i>void</i> <strong>fetch(
+mixed
+$_smarty_tpl_file, [mixed
+$_smarty_cache_id = null], [mixed
+$_smarty_compile_id = null], [mixed
+$_smarty_display = false])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodget_template_vars" id="methodget_template_vars"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method get_template_vars</strong> (line <span class="linenumber">577</span>)
+ </h4> 
+<h4><i>void</i> <strong>&amp;get_template_vars(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodis_cached" id="methodis_cached"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method is_cached</strong> (line <span class="linenumber">530</span>)
+ </h4> 
+<h4><i>void</i> <strong>is_cached(
+mixed
+$tpl_file, [mixed
+$cache_id = null], [mixed
+$compile_id = null])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodload_filter" id="methodload_filter"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method load_filter</strong> (line <span class="linenumber">469</span>)
+ </h4> 
+<h4><i>void</i> <strong>load_filter(
+mixed
+$type, mixed
+$name)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodquote_replace" id="methodquote_replace"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method quote_replace</strong> (line <span class="linenumber">1991</span>)
+ </h4> 
+<h4><i>void</i> <strong>quote_replace(
+mixed
+$string)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodregister_block" id="methodregister_block"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method register_block</strong> (line <span class="linenumber">333</span>)
+ </h4> 
+<h4><i>void</i> <strong>register_block(
+mixed
+$block, mixed
+$block_impl)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodregister_compiler_function" id="methodregister_compiler_function"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method register_compiler_function</strong> (line <span class="linenumber">352</span>)
+ </h4> 
+<h4><i>void</i> <strong>register_compiler_function(
+mixed
+$function, mixed
+$function_impl)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodregister_function" id="methodregister_function"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method register_function</strong> (line <span class="linenumber">314</span>)
+ </h4> 
+<h4><i>void</i> <strong>register_function(
+mixed
+$function, mixed
+$function_impl)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodregister_modifier" id="methodregister_modifier"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method register_modifier</strong> (line <span class="linenumber">371</span>)
+ </h4> 
+<h4><i>void</i> <strong>register_modifier(
+mixed
+$modifier, mixed
+$modifier_impl)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodregister_outputfilter" id="methodregister_outputfilter"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method register_outputfilter</strong> (line <span class="linenumber">450</span>)
+ </h4> 
+<h4><i>void</i> <strong>register_outputfilter(
+mixed
+$function)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodregister_postfilter" id="methodregister_postfilter"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method register_postfilter</strong> (line <span class="linenumber">430</span>)
+ </h4> 
+<h4><i>void</i> <strong>register_postfilter(
+mixed
+$function)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodregister_prefilter" id="methodregister_prefilter"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method register_prefilter</strong> (line <span class="linenumber">410</span>)
+ </h4> 
+<h4><i>void</i> <strong>register_prefilter(
+mixed
+$function)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodregister_resource" id="methodregister_resource"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method register_resource</strong> (line <span class="linenumber">390</span>)
+ </h4> 
+<h4><i>void</i> <strong>register_resource(
+mixed
+$type, mixed
+$functions)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodtemplate_exists" id="methodtemplate_exists"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method template_exists</strong> (line <span class="linenumber">568</span>)
+ </h4> 
+<h4><i>void</i> <strong>template_exists(
+mixed
+$tpl_file)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodtrigger_error" id="methodtrigger_error"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method trigger_error</strong> (line <span class="linenumber">587</span>)
+ </h4> 
+<h4><i>void</i> <strong>trigger_error(
+mixed
+$error_msg, [mixed
+$error_type = E_USER_WARNING])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodunregister_block" id="methodunregister_block"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method unregister_block</strong> (line <span class="linenumber">343</span>)
+ </h4> 
+<h4><i>void</i> <strong>unregister_block(
+mixed
+$block)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodunregister_compiler_function" id="methodunregister_compiler_function"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method unregister_compiler_function</strong> (line <span class="linenumber">362</span>)
+ </h4> 
+<h4><i>void</i> <strong>unregister_compiler_function(
+mixed
+$function)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodunregister_function" id="methodunregister_function"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method unregister_function</strong> (line <span class="linenumber">324</span>)
+ </h4> 
+<h4><i>void</i> <strong>unregister_function(
+mixed
+$function)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodunregister_modifier" id="methodunregister_modifier"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method unregister_modifier</strong> (line <span class="linenumber">381</span>)
+ </h4> 
+<h4><i>void</i> <strong>unregister_modifier(
+mixed
+$modifier)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodunregister_outputfilter" id="methodunregister_outputfilter"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method unregister_outputfilter</strong> (line <span class="linenumber">460</span>)
+ </h4> 
+<h4><i>void</i> <strong>unregister_outputfilter(
+mixed
+$function)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodunregister_postfilter" id="methodunregister_postfilter"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method unregister_postfilter</strong> (line <span class="linenumber">440</span>)
+ </h4> 
+<h4><i>void</i> <strong>unregister_postfilter(
+mixed
+$function)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodunregister_prefilter" id="methodunregister_prefilter"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method unregister_prefilter</strong> (line <span class="linenumber">420</span>)
+ </h4> 
+<h4><i>void</i> <strong>unregister_prefilter(
+mixed
+$function)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="methodunregister_resource" id="methodunregister_resource"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method unregister_resource</strong> (line <span class="linenumber">400</span>)
+ </h4> 
+<h4><i>void</i> <strong>unregister_resource(
+mixed
+$type)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_assign_smarty_interface" id="method_assign_smarty_interface"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _assign_smarty_interface</strong> (line <span class="linenumber">728</span>)
+ </h4> 
+<h4><i>void</i> <strong>_assign_smarty_interface(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_autoload_filters" id="method_autoload_filters"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _autoload_filters</strong> (line <span class="linenumber">1978</span>)
+ </h4> 
+<h4><i>void</i> <strong>_autoload_filters(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_compile_template" id="method_compile_template"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _compile_template</strong> (line <span class="linenumber">1083</span>)
+ </h4> 
+<h4><i>void</i> <strong>_compile_template(
+mixed
+$tpl_file, mixed
+$template_source, mixed
+&$template_compiled)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_config_load" id="method_config_load"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _config_load</strong> (line <span class="linenumber">1191</span>)
+ </h4> 
+<h4><i>void</i> <strong>_config_load(
+mixed
+$file, mixed
+$section, mixed
+$scope)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_create_dir_structure" id="method_create_dir_structure"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _create_dir_structure</strong> (line <span class="linenumber">1598</span>)
+ </h4> 
+<h4><i>void</i> <strong>_create_dir_structure(
+mixed
+$dir)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_dequote" id="method_dequote"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _dequote</strong> (line <span class="linenumber">1385</span>)
+ </h4> 
+<h4><i>void</i> <strong>_dequote(
+mixed
+$string)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_fetch_template_info" id="method_fetch_template_info"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _fetch_template_info</strong> (line <span class="linenumber">1023</span>)
+ </h4> 
+<h4><i>void</i> <strong>_fetch_template_info(
+mixed
+$tpl_path, mixed
+&$template_source, mixed
+&$template_timestamp, [mixed
+$get_source = true], [mixed
+$quiet = false])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_generate_debug_output" id="method_generate_debug_output"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _generate_debug_output</strong> (line <span class="linenumber">757</span>)
+ </h4> 
+<h4><i>void</i> <strong>_generate_debug_output(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_get_auto_filename" id="method_get_auto_filename"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _get_auto_filename</strong> (line <span class="linenumber">1465</span>)
+ </h4> 
+<h4><i>void</i> <strong>_get_auto_filename(
+mixed
+$auto_base, [mixed
+$auto_source = null], [mixed
+$auto_id = null])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_get_compile_path" id="method_get_compile_path"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _get_compile_path</strong> (line <span class="linenumber">954</span>)
+ </h4> 
+<h4><i>void</i> <strong>_get_compile_path(
+mixed
+$tpl_file)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_get_include_path" id="method_get_include_path"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _get_include_path</strong> (line <span class="linenumber">2027</span>)
+ </h4> 
+<h4><i>void</i> <strong>_get_include_path(
+mixed
+$file_path, mixed
+&$new_file_path)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_get_microtime" id="method_get_microtime"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _get_microtime</strong> (line <span class="linenumber">2015</span>)
+ </h4> 
+<h4><i>void</i> <strong>_get_microtime(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_get_php_resource" id="method_get_php_resource"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _get_php_resource</strong> (line <span class="linenumber">856</span>)
+ </h4> 
+<h4><i>void</i> <strong>_get_php_resource(
+mixed
+$resource, mixed
+&$resource_type, mixed
+&$php_resource)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_get_plugin_filepath" id="method_get_plugin_filepath"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _get_plugin_filepath</strong> (line <span class="linenumber">1766</span>)
+ </h4> 
+<h4><i>void</i> <strong>_get_plugin_filepath(
+mixed
+$type, mixed
+$name)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_is_secure" id="method_is_secure"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _is_secure</strong> (line <span class="linenumber">824</span>)
+ </h4> 
+<h4><i>void</i> <strong>_is_secure(
+mixed
+$resource_type, mixed
+$resource_name)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_is_trusted" id="method_is_trusted"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _is_trusted</strong> (line <span class="linenumber">792</span>)
+ </h4> 
+<h4><i>void</i> <strong>_is_trusted(
+mixed
+$resource_type, mixed
+$resource_name)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_load_plugins" id="method_load_plugins"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _load_plugins</strong> (line <span class="linenumber">1808</span>)
+ </h4> 
+<h4><i>void</i> <strong>_load_plugins(
+mixed
+$plugins)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_load_resource_plugin" id="method_load_resource_plugin"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _load_resource_plugin</strong> (line <span class="linenumber">1918</span>)
+ </h4> 
+<h4><i>void</i> <strong>_load_resource_plugin(
+mixed
+$type)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_parse_file_path" id="method_parse_file_path"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _parse_file_path</strong> (line <span class="linenumber">976</span>)
+ </h4> 
+<h4><i>void</i> <strong>_parse_file_path(
+mixed
+$file_base_path, mixed
+$file_path, mixed
+&$resource_type, mixed
+&$resource_name)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_process_cached_inserts" id="method_process_cached_inserts"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _process_cached_inserts</strong> (line <span class="linenumber">1259</span>)
+ </h4> 
+<h4><i>void</i> <strong>_process_cached_inserts(
+mixed
+$results)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_process_template" id="method_process_template"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _process_template</strong> (line <span class="linenumber">915</span>)
+ </h4> 
+<h4><i>void</i> <strong>_process_template(
+mixed
+$tpl_file, mixed
+$compile_path)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_read_cache_file" id="method_read_cache_file"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _read_cache_file</strong> (line <span class="linenumber">1682</span>)
+ </h4> 
+<h4><i>void</i> <strong>_read_cache_file(
+mixed
+$tpl_file, mixed
+$cache_id, mixed
+$compile_id, mixed
+&$results)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_read_file" id="method_read_file"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _read_file</strong> (line <span class="linenumber">1400</span>)
+ </h4> 
+<h4><i>void</i> <strong>_read_file(
+mixed
+$filename, [mixed
+$start = null], [mixed
+$lines = null])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_rmdir" id="method_rmdir"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _rmdir</strong> (line <span class="linenumber">1551</span>)
+ </h4> 
+<h4><i>void</i> <strong>_rmdir(
+mixed
+$dirname, [mixed
+$level = 1], [mixed
+$exp_time = null])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_rm_auto" id="method_rm_auto"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _rm_auto</strong> (line <span class="linenumber">1516</span>)
+ </h4> 
+<h4><i>void</i> <strong>_rm_auto(
+mixed
+$auto_base, [mixed
+$auto_source = null], [mixed
+$auto_id = null], [mixed
+$exp_time = null])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_run_insert_handler" id="method_run_insert_handler"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _run_insert_handler</strong> (line <span class="linenumber">1308</span>)
+ </h4> 
+<h4><i>void</i> <strong>_run_insert_handler(
+mixed
+$args)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_run_mod_handler" id="method_run_mod_handler"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _run_mod_handler</strong> (line <span class="linenumber">1361</span>)
+ </h4> 
+<h4><i>void</i> <strong>_run_mod_handler(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_smarty_include" id="method_smarty_include"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _smarty_include</strong> (line <span class="linenumber">1119</span>)
+ </h4> 
+<h4><i>void</i> <strong>_smarty_include(
+mixed
+$_smarty_include_tpl_file, mixed
+$_smarty_include_vars)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_smarty_include_php" id="method_smarty_include_php"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _smarty_include_php</strong> (line <span class="linenumber">1156</span>)
+ </h4> 
+<h4><i>void</i> <strong>_smarty_include_php(
+mixed
+$_smarty_include_php_file, mixed
+$_smarty_assign, mixed
+$_smarty_once)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_trigger_plugin_error" id="method_trigger_plugin_error"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _trigger_plugin_error</strong> (line <span class="linenumber">2001</span>)
+ </h4> 
+<h4><i>void</i> <strong>_trigger_plugin_error(
+mixed
+$error_msg, [mixed
+$tpl_file = null], [mixed
+$tpl_line = null], [mixed
+$error_type = E_USER_ERROR])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_unlink" id="method_unlink"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _unlink</strong> (line <span class="linenumber">1583</span>)
+ </h4> 
+<h4><i>void</i> <strong>_unlink(
+mixed
+$resource, [mixed
+$exp_time = null])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_write_cache_file" id="method_write_cache_file"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _write_cache_file</strong> (line <span class="linenumber">1643</span>)
+ </h4> 
+<h4><i>void</i> <strong>_write_cache_file(
+mixed
+$tpl_file, mixed
+$cache_id, mixed
+$compile_id, mixed
+$results)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_write_compiled_template" id="method_write_compiled_template"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _write_compiled_template</strong> (line <span class="linenumber">964</span>)
+ </h4> 
+<h4><i>void</i> <strong>_write_compiled_template(
+mixed
+$compile_path, mixed
+$template_compiled, mixed
+$template_timestamp)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_write_file" id="method_write_file"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _write_file</strong> (line <span class="linenumber">1439</span>)
+ </h4> 
+<h4><i>void</i> <strong>_write_file(
+mixed
+$filename, mixed
+$contents, [mixed
+$create_dirs = false])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+	</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documention generated on Sat,  1 Feb 2003 10:02:11 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.2.0beta3</a>
+	</div>
+</body>
+</html>

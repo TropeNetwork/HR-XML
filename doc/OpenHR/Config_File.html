@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class Config_File</title>
+  <link rel="stylesheet" href="../media/stylesheet.css" />
+  <script src="../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../media/images/plus.gif";
+	imgMinus.src = "../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class Config_File
+</h2> (line <span class="linenumber">39</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
+
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+</pre>
+<p>
+	<b><i>Located in File: Program_Root/lib/Smarty/Config_File.class.php</i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Config_File class.</h5>
+<ul>
+		<li><strong>author:</strong> - Andrei Zmievski &lt;<a href="mailto:andrei@php.net">mailto:andrei@php.net</a>&gt;</li>
+		<li><strong>version:</strong> - 2.3.1</li>
+	</ul>
+<br /><hr />
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+
+<a name="var$booleanize" id="var$booleanize"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$booleanize = 	true</strong> (line <span class="linenumber">54</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Controls whether config values of on/true/yes and off/false/no get  converted to boolean values automatically.</h5>
+<ul>
+		<li><strong>access:</strong> - public</li>
+	</ul>
+</div>
+<a name="var$fix_newlines" id="var$fix_newlines"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$fix_newlines = 	true</strong> (line <span class="linenumber">69</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Controls whether or not to fix mac or dos formatted newlines.</h5>
+<div class="desc"><p>If set to true, \r or \r\n will be changed to \n.</p></div>
+<ul>
+		<li><strong>access:</strong> - public</li>
+	</ul>
+</div>
+<a name="var$overwrite" id="var$overwrite"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$overwrite = 	true</strong> (line <span class="linenumber">46</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Controls whether variables with the same name overwrite each other.</h5>
+<ul>
+		<li><strong>access:</strong> - public</li>
+	</ul>
+</div>
+<a name="var$read_hidden" id="var$read_hidden"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$read_hidden = 	true</strong> (line <span class="linenumber">61</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Controls whether hidden config sections/vars are read from the file.</h5>
+<ul>
+		<li><strong>access:</strong> - public</li>
+	</ul>
+</div>
+<a name="var$_config_data" id="var$_config_data"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_config_data = array()</strong> (line <span class="linenumber">73</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$_config_path" id="var$_config_path"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_config_path =  ""</strong> (line <span class="linenumber">72</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<a name="var$_separator" id="var$_separator"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$_separator =  ""</strong> (line <span class="linenumber">74</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+
+<A NAME='method_detail'></A>
+
+
+<a name="methodConfig_File" id="methodConfig_File"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/Constructor.gif" border="0" /> <strong class="method">Constructor Config_File</strong> (line <span class="linenumber">83</span>)
+ </h4> 
+<h4><i>void</i> <strong>Config_File(
+[$config_path
+$config_path = NULL])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Constructs a new config file class.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>$config_path $config_path</strong>: string (optional) path to the config files</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodclear" id="methodclear"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method clear</strong> (line <span class="linenumber">232</span>)
+ </h4> 
+<h4><i>void</i> <strong>clear(
+[$file_name
+$file_name = NULL])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Clear loaded config data for a certain file or all files.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>$file_name $file_name</strong>: string file to clear config data for</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodget" id="methodget"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method get</strong> (line <span class="linenumber">123</span>)
+ </h4> 
+<h4><i>mixed</i> <strong>&amp;get(
+$file_name
+$file_name, [$section_name
+$section_name = NULL], [$var_name
+$var_name = NULL])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Retrieves config info based on the file, section, and variable name.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>$file_name $file_name</strong>: string config file to get info for</li>
+			<li><strong>$section_name $section_name</strong>: string (optional) section to get info for</li>
+			<li><strong>$var_name $var_name</strong>: string (optional) variable to get info for</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - a value or array of values</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodget_file_names" id="methodget_file_names"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method get_file_names</strong> (line <span class="linenumber">176</span>)
+ </h4> 
+<h4><i>array</i> <strong>get_file_names(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Get all loaded config file names.</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - an array of loaded config file names</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodget_key" id="methodget_key"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method get_key</strong> (line <span class="linenumber">163</span>)
+ </h4> 
+<h4><i>mixed</i> <strong>&amp;get_key(
+$file_name
+$config_key)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Retrieves config info based on the key.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>$file_name $config_key</strong>: string config key (filename/section/var)</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - a value or array of values</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodget_section_names" id="methodget_section_names"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method get_section_names</strong> (line <span class="linenumber">189</span>)
+ </h4> 
+<h4><i>array</i> <strong>get_section_names(
+$file_name
+$file_name)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Get all section names from a loaded file.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>$file_name $file_name</strong>: string config file to get section names from</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - an array of section names from the specified file</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodget_var_names" id="methodget_var_names"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method get_var_names</strong> (line <span class="linenumber">209</span>)
+ </h4> 
+<h4><i>array</i> <strong>get_var_names(
+$file_name
+$file_name, [$section_name
+$section = NULL])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Get all global or section variable names.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>$file_name $file_name</strong>: string config file to get info for</li>
+			<li><strong>$section_name $section</strong>: string (optional) section to get info for</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - an array of variables names from the specified file/section</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodload_file" id="methodload_file"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method load_file</strong> (line <span class="linenumber">248</span>)
+ </h4> 
+<h4><i>void</i> <strong>load_file(
+$file_name
+$file_name, [$prepend_path
+$prepend_path = true])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Load a configuration file manually.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>$file_name $file_name</strong>: string file name to load</li>
+			<li><strong>$prepend_path $prepend_path</strong>: boolean whether current config path should be prepended to the filename</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodset_path" id="methodset_path"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method set_path</strong> (line <span class="linenumber">101</span>)
+ </h4> 
+<h4><i>void</i> <strong>set_path(
+$config_path
+$config_path)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Set the path where configuration files can be found.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>$config_path $config_path</strong>: string  path to the config files</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="method_parse_config_block" id="method_parse_config_block"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _parse_config_block</strong> (line <span class="linenumber">292</span>)
+ </h4> 
+<h4><i>void</i> <strong>_parse_config_block(
+mixed
+$config_block)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_set_config_var" id="method_set_config_var"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _set_config_var</strong> (line <span class="linenumber">317</span>)
+ </h4> 
+<h4><i>void</i> <strong>_set_config_var(
+mixed
+&$container, mixed
+$var_name, mixed
+$var_value, mixed
+$booleanize)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="method_trigger_error_msg" id="method_trigger_error_msg"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method _trigger_error_msg</strong> (line <span class="linenumber">346</span>)
+ </h4> 
+<h4><i>void</i> <strong>_trigger_error_msg(
+mixed
+$error_msg, [mixed
+$error_type = E_USER_WARNING])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+	</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documention generated on Sat,  1 Feb 2003 10:01:51 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.2.0beta3</a>
+	</div>
+</body>
+</html>
